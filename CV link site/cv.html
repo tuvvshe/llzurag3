@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Pictures Stacked</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto; /* Allows scrolling */
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aligns content at the top */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px; /* Space between images */
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Full width */
+            max-width: 800px; /* Limits container width */
+        }
+        .image-wrapper {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            overflow: hidden; /* Hide overflow */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Ensure images fit within their containers */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="image1.jpg" alt="Description of the first image">
+        </div>
+        <div class="image-wrapper">
+            <img src="image2.jpg" alt="Description of the second image">
+        </div>
+    </div>
+</body>
+</html>
